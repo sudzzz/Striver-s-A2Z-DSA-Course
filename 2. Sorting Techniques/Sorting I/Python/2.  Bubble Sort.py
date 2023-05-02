@@ -1,5 +1,5 @@
 # cook your dish here
-#Selection Sort
+#Bubble Sort
 
 
 def bubbleSort(arr,n):

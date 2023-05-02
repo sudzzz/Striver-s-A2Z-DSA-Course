@@ -1,5 +1,5 @@
 # cook your dish here
-#Selection Sort
+#Insertion Sort
 
 
 def insertionSort(arr,n):

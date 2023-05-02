@@ -1,5 +1,5 @@
 /*
-Selection Sort
+Bubble Sort
 */
 
 #include <bits/stdc++.h>

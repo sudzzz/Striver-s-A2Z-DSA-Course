@@ -1,5 +1,5 @@
 /*
-Selection Sort
+Insertion Sort
 */
 
 #include <bits/stdc++.h>
