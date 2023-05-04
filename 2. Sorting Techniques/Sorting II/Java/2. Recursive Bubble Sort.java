@@ -1,11 +1,13 @@
 /* package codechef; // don't place package name! */
 
 import java.util.*;
+import java.lang.*;
+import java.io.*;
 
 /* Name of the class has to be "Main" only if the class is public. */
 
 /*
-Selection Sort
+Recursive Bubble Sort
 */
 
 class Codechef
@@ -15,17 +17,17 @@ class Codechef
         arr[i] = arr[j];
         arr[j] = temp;
     }
-    public static void selectionSort(int arr[]){
-        int n = arr.length;
-        for(int i=0;i<n-1;i++){
-            int minimum = i;
-            for(int j=i;j<n;j++){
-                if(arr[j]<arr[minimum]){
-                    minimum = j;
-                }
-            }
-            swap(arr,i,minimum);
+    
+    public static void recursiveBubbleSort(int arr[],int n){
+        if(n==1){
+            return;
         }
+        for(int j=0;j<n-1;j++){
+            if(arr[j]>arr[j+1]){
+                swap(arr,j,j+1);
+            }
+        }
+        recursiveBubbleSort(arr,n-1);
     }
     
 	public static void main (String[] args) throws java.lang.Exception
@@ -37,10 +39,9 @@ class Codechef
 		for(int i=0;i<n;i++){
 		    arr[i] = sc.nextInt();
  		}
- 		selectionSort(arr);
+ 		recursiveBubbleSort(arr,n);
  		for(int i=0;i<n;i++){
  		    System.out.print(arr[i]+" ");
  		}
-        sc.close();
 	}
 }
